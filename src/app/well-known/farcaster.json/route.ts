@@ -17,7 +17,7 @@ export async function GET() {
     frame: {
       // Required fields
       version: '1',
-      name: 'Neynar Score Checker',
+      name: 'Neynar Score',
       iconUrl: `${appUrl}/images/icon.png`,
       homeUrl: appUrl,
       
@@ -29,7 +29,7 @@ export async function GET() {
       webhookUrl: `${appUrl}/api/webhook`,
       
       // App Store / Discovery fields
-      subtitle: 'Check your Farcaster reputation',
+      subtitle: 'Check your Farcaster score',  // Max 30 chars
       description: 'Discover your Neynar score - a reputation metric based on your Farcaster activity, engagement, and network quality. Share your score with friends!',
       primaryCategory: 'social',
       tags: ['reputation', 'score', 'neynar', 'analytics', 'farcaster'],
@@ -46,7 +46,7 @@ export async function GET() {
       tagline: 'Know your Farcaster reputation',
       
       // Open Graph
-      ogTitle: 'Neynar Score Checker',
+      ogTitle: 'Neynar Score',
       ogDescription: 'Check your Farcaster reputation score powered by Neynar',
       ogImageUrl: `${appUrl}/images/og-image.png`,
       
