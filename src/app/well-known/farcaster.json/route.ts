@@ -14,25 +14,25 @@ export async function GET() {
       payload,
       signature,
     },
-    frame: {
+    miniapp: {
       // Required fields
       version: '1',
       name: 'Neynar Score',
-      iconUrl: `${appUrl}/images/icon.png`,
+      iconUrl: `${appUrl}/images/icon.png`,        // Must be 1024x1024 PNG, no alpha
       homeUrl: appUrl,
       
       // Splash screen
-      splashImageUrl: `${appUrl}/images/splash.png`,
+      splashImageUrl: `${appUrl}/images/splash.png`,  // Must be 200x200px
       splashBackgroundColor: '#0f0f1a',
       
       // Webhook for notifications
       webhookUrl: `${appUrl}/api/webhook`,
       
-      // App Store / Discovery fields
+      // App Store / Discovery fields (no emojis, no special chars)
       subtitle: 'Check your Farcaster score',  // Max 30 chars
-      description: 'Discover your Neynar score - a reputation metric based on your Farcaster activity, engagement, and network quality. Share your score with friends!',
+      description: 'Discover your Neynar score based on your Farcaster activity and engagement. Share your reputation score with friends.',  // Max 170 chars
       primaryCategory: 'social',
-      tags: ['reputation', 'score', 'neynar', 'analytics', 'farcaster'],
+      tags: ['reputation', 'score', 'neynar', 'analytics', 'social'],  // lowercase, no spaces
       
       // Screenshots (3 max, 1284x2778 portrait)
       screenshotUrls: [
@@ -43,16 +43,12 @@ export async function GET() {
       
       // Hero/promotional image (1200x630, 1.91:1 ratio)
       heroImageUrl: `${appUrl}/images/hero.png`,
-      tagline: 'Know your Farcaster reputation',
+      tagline: 'Know your Farcaster reputation',  // Max 30 chars
       
       // Open Graph
-      ogTitle: 'Neynar Score',
-      ogDescription: 'Check your Farcaster reputation score powered by Neynar',
-      ogImageUrl: `${appUrl}/images/og-image.png`,
-      
-      // Deprecated but still useful for backward compat
-      imageUrl: `${appUrl}/images/og-image.png`,
-      buttonTitle: '🔮 Check Score',
+      ogTitle: 'Neynar Score',  // Max 30 chars
+      ogDescription: 'Check your Farcaster reputation score powered by Neynar',  // Max 100 chars
+      ogImageUrl: `${appUrl}/images/og-image.png`,  // 1200x630 PNG
     },
   };
 
